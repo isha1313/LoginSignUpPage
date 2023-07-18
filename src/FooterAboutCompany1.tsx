@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CSSProperties } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
-import { Box, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import image from "./Imege.png";
 import clsx from "clsx";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
@@ -54,7 +54,7 @@ const styles = (theme: any) => ({
 });
 
 interface DetailsProps extends WithStyles<typeof styles> {}
-class DetailsPage extends Component<DetailsProps> {
+class FooterAboutComapny1 extends Component<DetailsProps> {
   render() {
     const { classes } = this.props;
     const dummyDescription1 =
@@ -81,4 +81,4 @@ class DetailsPage extends Component<DetailsProps> {
   }
 }
 
-export default withStyles(styles)(DetailsPage);
+export default withStyles(styles)(FooterAboutComapny1);

@@ -1,23 +1,20 @@
 import React from "react";
-import SignUp from "./SignUp";
-import Login from "./Login";
-import Footer from "./FooterCat";
-import FooterAbout from "./FooterAbout";
-import FooterCat from "./FooterCat";
-import FooterVIsit from "./FooterVisit";
-import DetailsPage from "./DetailsPage";
-import JobApplyActionPage from "./JobApplyActionPage";
+import FooterAboutCompany1 from "./FooterAboutCompany1";
+import FooterAboutCompany2 from "./FooterAboutCompany2";
+import FooterAboutCompany3 from "./FooterAboutCompany3";
+import FooterAboutComapny4 from "./FooterAboutComapny4";
 import JobApplicationSuccess from "./JobApplicationSuccess";
+import JobApplyActionPage from "./JobApplyActionPage";
 
 function App() {
   return (
     <>
-      <JobApplyActionPage />
       <JobApplicationSuccess />
-      <DetailsPage />
-      <FooterAbout />
-      <FooterCat />
-      <FooterVIsit />
+      <JobApplyActionPage />
+      <FooterAboutCompany1 />
+      <FooterAboutCompany2 />
+      <FooterAboutCompany3 />
+      <FooterAboutComapny4 />
     </>
   );
 }

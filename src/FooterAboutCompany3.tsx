@@ -78,7 +78,7 @@ const styles = (theme: any) => ({
 });
 
 interface FooterProps extends WithStyles<typeof styles> {}
-class Footer extends Component<FooterProps> {
+class FooterAboutComapny3 extends Component<FooterProps> {
   render() {
     const { classes } = this.props;
     const dummyData = [
@@ -119,4 +119,4 @@ class Footer extends Component<FooterProps> {
   }
 }
 
-export default withStyles(styles)(Footer);
+export default withStyles(styles)(FooterAboutComapny3);

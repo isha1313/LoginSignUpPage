@@ -6,7 +6,6 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
-  InputLabel,
   TextField,
   Typography,
 } from "@material-ui/core";
@@ -14,7 +13,6 @@ import { green } from "@material-ui/core/colors";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import clsx from "clsx";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import AttachFileIcon from "@material-ui/icons/AttachFile";
 
 const styles = (theme: any) => ({
   root: {
@@ -28,7 +26,9 @@ const styles = (theme: any) => ({
     },
   },
   subParagraph: {
-    marginTop: "8px",
+    lineHeight: "22px",
+    marginTop: "13px",
+    marginBottom: "13px",
     fontFamily: "Lato",
     fontWeight: 400,
     fontSize: "14px",
@@ -44,6 +44,13 @@ const styles = (theme: any) => ({
     "& label.Mui-focused": {
       color: "#D9D9D9",
     },
+    "& .MuiInputAdornment-positionEnd": {
+      marginRight: "12px",
+    },
+    "& .MuiOutlinedInput-input": {
+      marginLeft: "12px",
+    },
+
     "& .MuiInput-underline:after": {
       borderBottomColor: "#D9D9D9",
     },
@@ -59,29 +66,36 @@ const styles = (theme: any) => ({
         borderColor: "#D9D9D9",
       },
       "&.MuiInputBase-root .Mui-disabled": {
-        color: "rgba(0, 0, 0, 0.87)",
+        color: "#B1B3C3",
         cursor: "pointer",
       },
+      '& .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline':{
+        borderColor: "#D9D9D9",
+      }
     },
     width: "480px",
+    height: "48px",
     "@media(max-width:550px)": {
       width: "350px",
     },
-    "@media(max-width:450px)": {
-      width: "300px",
+    "@media(max-width:450px)  ": {
+      width: "320px",
     },
     "@media(max-width:400px)": {
-      width: "250px",
+      width: "304px",
     },
   },
   textStyle: {
     fontFamily: "Lato",
     fontWeight: 400,
     fontSize: "15px",
+    lineHeight: "24px",
   },
   textStyle2: {
     fontFamily: "Lato",
     fontWeight: 700,
+    color: "#595959",
+    lineHeight: "24px",
     fontSize: "15px",
   },
   headingStyle: {
@@ -90,12 +104,20 @@ const styles = (theme: any) => ({
   innerBox: {
     marginBottom: "40px",
   },
+  innerBox3: {
+    marginTop: "34px",
+    marginBottom: "42px",
+  },
+  innerBox2: {
+    marginBottom: "10px",
+  },
   customButton: {
     color: "#101010",
     fontFamily: "lato",
     fontWeight: 500,
     fontSize: "15px",
     width: "184px",
+    height: "56px",
     borderRadius: "8px",
     textAlign: "center" as CSSProperties["textAlign"],
     padding: "16px 12px",
@@ -107,6 +129,9 @@ const styles = (theme: any) => ({
       fontSize: "12px",
       width: "100px",
       padding: "12px 20px",
+    },
+    "&.MuiButton-contained": {
+      boxShadow: "unset",
     },
   },
   fileInput: {
@@ -202,7 +227,6 @@ class JobApplyActionPage extends Component<JobApplyActionPageProps> {
                           classes.textStyle,
                           classes.headingStyle
                         )}
-                        style={{ color: "#34373A" }}
                       >
                         {item.headingName}
                       </Typography>
@@ -216,6 +240,7 @@ class JobApplyActionPage extends Component<JobApplyActionPageProps> {
                           classes: {
                             input: classes.textStyle,
                           },
+                          style: { color: "#B1B3C3" },
                         }}
                         className={classes.textFieldStyle}
                       />
@@ -224,7 +249,7 @@ class JobApplyActionPage extends Component<JobApplyActionPageProps> {
                 }
                 if (item.type === "file") {
                   return (
-                    <Box className={classes.innerBox} key={`${index}index`}>
+                    <Box key={`${index}index`}>
                       <Typography
                         className={clsx(
                           classes.textStyle,
@@ -269,7 +294,7 @@ class JobApplyActionPage extends Component<JobApplyActionPageProps> {
                 }
               })}
 
-              <Box className={classes.innerBox} style={{ maxWidth: "480px" }}>
+              <Box className={classes.innerBox3} style={{ maxWidth: "480px" }}>
                 <FormControlLabel
                   control={<GreenCheckbox />}
                   label={
@@ -277,7 +302,7 @@ class JobApplyActionPage extends Component<JobApplyActionPageProps> {
                       className={clsx(classes.textStyle, classes.headingStyle)}
                       style={{ color: "#595959" }}
                     >
-                      I agree to the
+                      I agree to the{" "}
                       <span className={classes.textStyle2}>
                         Terms & Conditions{" "}
                       </span>

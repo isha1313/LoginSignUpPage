@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { Box, Typography, withStyles } from "@material-ui/core";
 import { WithStyles } from "@material-ui/core/styles";
 import Group2 from "./Group2.png";
+
 const styles = (theme: any) => ({
   root: {
     flexGrow: 1,
