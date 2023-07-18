@@ -6,10 +6,14 @@ import FooterAbout from "./FooterAbout";
 import FooterCat from "./FooterCat";
 import FooterVIsit from "./FooterVisit";
 import DetailsPage from "./DetailsPage";
+import JobApplyActionPage from "./JobApplyActionPage";
+import JobApplicationSuccess from "./JobApplicationSuccess";
 
 function App() {
   return (
     <>
+      <JobApplyActionPage />
+      <JobApplicationSuccess />
       <DetailsPage />
       <FooterAbout />
       <FooterCat />

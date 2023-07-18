@@ -33,7 +33,7 @@ const styles = (theme: any) => ({
     backgroundColor: "#E7FFD8",
     width: "137px",
     borderRadius: "20px",
-    padding: "6px 10px",
+    padding: "10px 10px",
     textAlign: "center" as CSSProperties["textAlign"],
   },
   heading: {
